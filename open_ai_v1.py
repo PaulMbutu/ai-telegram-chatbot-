@@ -13,6 +13,7 @@ generated_text = response.choices[0].text
 print(generated_text)
 """
 #theres an error for payment
+#theres an error for payment
 
 def talk_to_me():
 
