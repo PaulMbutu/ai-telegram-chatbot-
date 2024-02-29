@@ -1,7 +1,7 @@
 from telegram.ext import Updater, MessageHandler, Filters
 import openai
 
-BOT_KEY = '5979065864:AAGEdnQlbf0usTqAippSR3-exGb814FclpA'
+BOT_KEY = ''
 
 def handle_message(update, context):
     variable = update.message.text
