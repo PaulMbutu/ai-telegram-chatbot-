@@ -1,13 +1,8 @@
 import telegram
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
-from telegram.ext import Updater, CommandHandler, CallbackQueryHandler
-
-
-import telegram
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, MessageHandler, Filters
 
-BOT_KEY = '5979065864:AAGEdnQlbf0usTqAippSR3-exGb814FclpA'
+BOT_KEY = ''                                                                                                     #insert telegram bot keyfrom bot father
 
 def start(update, context):
     message = "Niaje Buda Welcome to the bot!"
