@@ -1,6 +1,6 @@
 import openai
 """
-openai.api_key = "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" # Replace with your OpenAI API key
+openai.api_key = ""                                                                                   # Replace with your OpenAI API key
 
 prompt = input("Ask me anything")
 model = "text-davinci-002"
@@ -13,17 +13,17 @@ generated_text = response.choices[0].text
 print(generated_text)
 """
 
-#theres an error for payment
-#theres an error for payment
+# If theres an error check on yourchat gpt subscription. The first month is free to use the api
 
 
-def talk_to_me():
 
-            openai.api_key = "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" # supply your API key however you choose
+def chat():
+
+            openai.api_key = ""                                                                                                   # supply your API key however you choose
 
             message = {"role":"user", "content": input("This is the beginning of your chat with AI. [To exit, send \"###\".]\n\nYou:")};
 
-            conversation = [{"role": "system", "content": "DIRECTIVE_FOR_gpt-3.5-turbo"}]#add system message sets response tone
+            conversation = [{"role": "system", "content": "DIRECTIVE_FOR_gpt-3.5-turbo"}]                                          #add system message sets response tone
 
             while(message["content"]!="###"):
                 conversation.append(message)
@@ -34,8 +34,8 @@ def talk_to_me():
                 print(response)
                 
                 conversation.append(completion.choices[0].message)
-#talk_to_me()
-def talk_to_me_once():
+#chat()
+def reply_once():
 
                 openai.api_key = "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" # supply your API key however you choose
 
@@ -43,13 +43,11 @@ def talk_to_me_once():
                 message= {"role":"user", "content":"what is gold"}
                 conversation = [{"role": "system", "content": "DIRECTIVE_FOR_gpt-3.5-turbo"}]#add system message sets response tone
                 conversation.append(message)
-                #message["content"] = "what is gold"
                 completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=conversation)
                 response={completion.choices[0].message.content}
-                
                 
                 print(response)
                 
                 conversation.append(completion.choices[0].message)
-talk_to_me_once()
+reply_once()
 
